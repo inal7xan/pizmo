@@ -5,7 +5,7 @@ export default {
       navItems: [
         { page: 'Home', link: `/` },
         { page: 'Order', link: `/order` },
-        { page: 'Market', link: `/market` },
+        { page: 'Menu', link: `/menu` },
         { page: 'About', link: `/about` },
         { page: 'Info', link: `/info` }
       ]

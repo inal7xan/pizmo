@@ -10,17 +10,15 @@ export default {
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora excepturi laboriosam ut porro dolorem fugiat rem sint quo qui labore recusandae officia hic unde officiis assumenda perferendis quidem, architecto enim.'
         },
         {
-          cardIcon: `<i class='bx bx-basket' ></i>`,
-          cardH: 'Hot Food',
-          cardP:
-            'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora excepturi laboriosam ut porro dolorem fugiat rem sint quo qui labore recusandae officia hic unde officiis assumenda perferendis quidem, architecto enim.'
-        },
-        {
           cardIcon: `<i class='bx bx-qr-scan' ></i>`,
           cardH: 'QR Code Pay',
           cardP:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora excepturi laboriosam ut porro dolorem fugiat rem sint quo qui labore recusandae officia hic unde officiis assumenda perferendis quidem, architecto enim.'
         }
+      ],
+      galeryItems: [
+        {imgUrl: `https://thefoodcharlatan.com/wp-content/uploads/2021/08/Homemade-Pizza-Recipe-1-Hour-or-Overnight-20.jpg`, imgH: "Classic Pizza"},
+        {imgUrl: `https://www.recipetineats.com/wp-content/uploads/2020/05/Pepperoni-Pizza_5-SQjpg.jpg`, imgH: "Classic Pizza"}
       ]
     }
   }
@@ -41,6 +39,9 @@ export default {
     </div>
   </div>
   <!-- service -->
+  <div class="serviceH">
+        <h1>Service</h1>
+      </div>
   <div class="serve">
     <div class="services">
       <div
@@ -58,6 +59,15 @@ export default {
       </div>
     </div>
   </div>
+  <!-- galery -->
+  <div class="serviceH">
+        <h1>Galery</h1>
+      </div>
+  <div class="pizzaGaleryContainer">
+    <div class="pizzaFoto" :style="{ 'background-image': 'url(' + galeryItem.imgUrl + ')' }" v-for="galeryItem in galeryItems" :key="galeryItem.imgUrl">
+      <h2>{{ galeryItem.imgH }}</h2>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -70,6 +80,7 @@ export default {
   height: 100vh;
   background-color: var(--danger);
   transition: 0.6s background-color ease;
+  
 }
 .introContainer .introImage {
   position: relative;
@@ -105,16 +116,25 @@ export default {
 }
 
 /* service */
+.serviceH {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline 6px solid var(--danger);
+}
+.serve{
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
 .services {
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 .serviceCard {
   position: relative;
   float: left;
-  top: 80px;
+  top: 120px;
   width: 100%;
   max-width: 350px;
   height: 400px;
@@ -138,10 +158,44 @@ export default {
 }
 /* responsive */
 @media (max-width: 699px) {
-  .services {
+  .services, .pizzaGaleryContainer {
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
+    height: 130vh;
+  
   }
+  .services {
+    height: 130vh;
+  }
+}
+/* galery */
+.pizzaGaleryContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.pizzaFoto {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  float: left;
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 30px;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: .2s opacity;
+}
+.pizzaFoto:hover {
+  opacity: 1;
 }
 </style>
