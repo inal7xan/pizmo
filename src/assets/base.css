@@ -1,0 +1,24 @@
+/* color */
+:root {
+  --primary: #000;
+  --primary-gray: #222;
+  --danger: #a83e3e;
+  --danger-light: rgb(201, 67, 83);
+  --faded: #f6f6f2;
+}
+/* none base :D */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  height: 100%;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
