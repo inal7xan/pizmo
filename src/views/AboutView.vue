@@ -1,4 +1,3 @@
-
 <script>
 export default {
   data() {
@@ -16,26 +15,28 @@ export default {
 </script>
 <template>
   <div class="aboutContainer">
-<div class="about">
-  <div class="aboutH">
-      <h1>Pizmo Pizza Restournat Cafe</h1>
+    <div class="about">
+      <div class="aboutH">
+        <h1>Pizmo Pizza Restourant Cafe</h1>
+      </div>
+      <div class="aboutP">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, et? Commodi fuga
+          quia nisi aperiam illum eaque placeat accusamus ex laboriosam enim explicabo similique
+          atque, laborum asperiores, saepe deserunt nulla. Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit. Consectetur, et? Commodi fuga quia nisi aperiam illum eaque placeat
+          accusamus ex laboriosam enim explicabo similique atque, laborum asperiores, saepe deserunt
+          nulla.
+        </p>
+      </div>
+      <div class="aboutMedia">
+        <ul>
+          <li v-for="aboutMediaItem in aboutMediaItems" :key="aboutMediaItem">
+            <RouterLink :to="aboutMediaItem.mLink" v-html="aboutMediaItem.aboutIcon"></RouterLink>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="aboutP">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, et? Commodi fuga quia
-        nisi aperiam illum eaque placeat accusamus ex laboriosam enim explicabo similique atque,
-        laborum asperiores, saepe deserunt nulla.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, et? Commodi fuga quia
-        nisi aperiam illum eaque placeat accusamus ex laboriosam enim explicabo similique atque,
-        laborum asperiores, saepe deserunt nulla.
-      </p>
-    </div>
-    <div class="aboutMedia">
-      <ul>
-        <li v-for="aboutMediaItem in aboutMediaItems" :key="aboutMediaItem"><RouterLink :to="aboutMediaItem.mLink" v-html="aboutMediaItem.aboutIcon"></RouterLink></li>
-      </ul>
-    </div>
-</div>
   </div>
 </template>
 
@@ -59,7 +60,7 @@ export default {
   padding: 10px;
   margin: 10px;
   border-radius: 50%;
-  transition: .2s;
+  transition: 0.2s;
   border: 2px solid var(--danger-light);
 }
 .aboutMedia ul li:hover {

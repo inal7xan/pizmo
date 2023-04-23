@@ -17,8 +17,14 @@ export default {
         }
       ],
       galeryItems: [
-        {imgUrl: `https://thefoodcharlatan.com/wp-content/uploads/2021/08/Homemade-Pizza-Recipe-1-Hour-or-Overnight-20.jpg`, imgH: "Classic Pizza"},
-        {imgUrl: `https://www.recipetineats.com/wp-content/uploads/2020/05/Pepperoni-Pizza_5-SQjpg.jpg`, imgH: "Classic Pizza"}
+        {
+          imgUrl: `https://thefoodcharlatan.com/wp-content/uploads/2021/08/Homemade-Pizza-Recipe-1-Hour-or-Overnight-20.jpg`,
+          imgH: 'Classic Pizza'
+        },
+        {
+          imgUrl: `https://www.recipetineats.com/wp-content/uploads/2020/05/Pepperoni-Pizza_5-SQjpg.jpg`,
+          imgH: 'Classic Pizza'
+        }
       ]
     }
   }
@@ -40,8 +46,8 @@ export default {
   </div>
   <!-- service -->
   <div class="serviceH">
-        <h1>Service</h1>
-      </div>
+    <h1>Service</h1>
+  </div>
   <div class="serve">
     <div class="services">
       <div
@@ -61,10 +67,15 @@ export default {
   </div>
   <!-- galery -->
   <div class="serviceH">
-        <h1>Galery</h1>
-      </div>
+    <h1>Galery</h1>
+  </div>
   <div class="pizzaGaleryContainer">
-    <div class="pizzaFoto" :style="{ 'background-image': 'url(' + galeryItem.imgUrl + ')' }" v-for="galeryItem in galeryItems" :key="galeryItem.imgUrl">
+    <div
+      class="pizzaFoto"
+      :style="{ 'background-image': 'url(' + galeryItem.imgUrl + ')' }"
+      v-for="galeryItem in galeryItems"
+      :key="galeryItem.imgUrl"
+    >
       <h2>{{ galeryItem.imgH }}</h2>
     </div>
   </div>
@@ -80,7 +91,6 @@ export default {
   height: 100vh;
   background-color: var(--danger);
   transition: 0.6s background-color ease;
-  
 }
 .introContainer .introImage {
   position: relative;
@@ -122,7 +132,7 @@ export default {
   font-size: 2rem;
   text-decoration: underline 6px solid var(--danger);
 }
-.serve{
+.serve {
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .services {
@@ -158,12 +168,12 @@ export default {
 }
 /* responsive */
 @media (max-width: 699px) {
-  .services, .pizzaGaleryContainer {
+  .services,
+  .pizzaGaleryContainer {
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
     height: 130vh;
-  
   }
   .services {
     height: 130vh;
@@ -193,7 +203,7 @@ export default {
   margin: 30px;
   background-position: center;
   background-size: 100% 100%;
-  transition: .2s opacity;
+  transition: 0.2s opacity;
 }
 .pizzaFoto:hover {
   opacity: 1;
