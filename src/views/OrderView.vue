@@ -29,12 +29,11 @@ export default {
 }
 </script>
 
-
 <template>
   <div class="orderContainer">
     <div class="order">
       <h1 class="orderH" style="text-align: center">Order Now</h1>
-      
+
       <div class="priceBox">
         <div>{{ selectedPizza }}</div>
         <br />
